@@ -30,7 +30,7 @@ font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucid
   box-shadow: 0px 1px 3px #2a2a2a;
 }
 
-.navbar-inverse .navbar-brand {
+.navbar-brand {
 
   padding: 20px;
 	font-family: 'pacificoregular', sans-serif;
@@ -41,11 +41,15 @@ font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucid
 }
 
 .navbar-toggler {
-  background-color: #688269; 
+  background-color: #688269;
 }
 
 
 .page-item.active .page-link {
   background-color: #688269;
   border-color: #323233;
+}
+
+.nav-link {
+  color: #688269;
 }
