@@ -4,4 +4,8 @@ class PlacesController < ApplicationController
 		@pagy, @places = pagy(Place.all)
 	end
 
+  def new
+    @place = Place.new
+  end
+
 end
