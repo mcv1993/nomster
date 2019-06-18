@@ -34,9 +34,9 @@
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDvwjSALN_tinjlZV-1-mO-RHVFy4EPFFc&callback=initMap">
     </script>
-
 </html>
-<% end %>
+
+   <% end %>
 <br />
   <div class="float-right">
     <% if current_user && current_user == @place.user %>
@@ -48,7 +48,7 @@
 
 <div class="clear"></div>
 
-<%= simple_form_for @comment, url: '#' do |f| %>
+<%= simple_form_for @comment, url: place_comments_path(@place) do |f| %>
   <%= f.input :message %>
   <%= f.input :rating %>
   <%= f.submit "Add a Comment", class: 'btn btn-primary' %>
