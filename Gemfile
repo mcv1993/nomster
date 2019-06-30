@@ -81,3 +81,9 @@ gem 'devise'
 gem "geocoder"
 
 gem 'figaro'
+
+gem 'carrierwave'
+
+gem 'figaro'
+
+gem 'fog-aws'

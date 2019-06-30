@@ -44,6 +44,21 @@
    <% end %>
 <br />
 <br />
+
+<%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
+  <%= f.input :caption %>
+  <%= f.input :picture %>
+  <%= f.submit "Post!", class: 'btn btn-primary' %>
+<% end %>
+
+<br />
+
+<% @place.photos.each do |photo| %>
+  <%= image_tag photo.picture.url %>
+    <%= photo.picture %>
+      <b><%= photo.caption %></b>
+      <small><%= photo.user.email %></small>
+<% end %>
 </div>
 
 <div class="clear"></div>
