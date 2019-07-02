@@ -46,16 +46,17 @@
 <br />
 
 <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
-  <%= f.input :caption %>
   <%= f.input :picture %>
+  <%= f.input :caption %>
   <%= f.submit "Post!", class: 'btn btn-primary' %>
 <% end %>
+
+
 
 <br />
 
 <% @place.photos.each do |photo| %>
   <%= image_tag photo.picture.url %>
-    <%= photo.picture %>
       <b><%= photo.caption %></b>
       <small><%= photo.user.email %></small>
 <% end %>
@@ -88,7 +89,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <%= f.submit "Add a Comment", class: 'btn btn-primary' %>
+        <%= f.submit "Submit", class: 'btn btn-primary' %>
       </div>
       <% end %>
     </div>
