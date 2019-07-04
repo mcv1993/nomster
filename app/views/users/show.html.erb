@@ -1,6 +1,18 @@
 <h1>User Dashboard</h1>
 
-<h1><%= @user.email %></h1> 
-<h3>Member Since: <%= @user.created_at.strftime("%B %d, %Y") %></h3>
-<h4>Submitted Comments: <%= @user.comments.count %></h4>
-<h4>Total 5-Star Ratings Given: <%= @user.comments.where(rating: 'five_stars').count %>
+<div class="booyah-box">
+  <div class="row">
+    <div class="col-4">
+      <%= image_tag 'user1.png' %>
+    </div>
+
+  <div class="col-8">
+  <h1><%= @user.email %></h1> 
+  <h3>Member Since: <%= @user.created_at.strftime("%B %d, %Y") %></h3>
+  <h4>Submitted Comments: <%= @user.comments.count %></h4>
+  <h4>Total 5-Star Ratings Given: <%= @user.comments.where(rating: 'five_stars').count %>
+
+  </div>
+  </div>
+  <div class="clear"></div>
+</div>
