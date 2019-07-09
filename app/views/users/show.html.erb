@@ -20,13 +20,14 @@
 <br />
 <h1 class="text-center">My Comments</h1>
 <br />
+
 <div class="row">
-<%= @user.comments.each do|comment| %>
+<% @user.comments.each do |comment| %>
   <div class="col-12 col-sm-6">
-    <h2 class="text-center"><%= link_to comment.place.name, place_path(comment.place) %></h2>
+    <h2 class="text-center"><%= link_to "stuck", place_path(comment.place_id) %></h2>
     <blockquote>
-      <% if comment.humanized_rating.present? %>
-        <b><%= comment.humanized_rating %></b> -
+    <% if comment.humanized_rating.present? %>
+      <b><%= comment.humanized_rating %></b> -
       <% end %>
         <%= comment.message %>
       <small><%= comment.user.email %></small>
@@ -40,6 +41,7 @@
 <h2 class="text-center">My Places</h2>
 
 <%= @user.places.each do |place| %>
+
 <div class="booyah-box col-10 offset-1">
 		<h1><%= link_to place.name, place_path(place) %></h1>
 		<i><%= place.address %></i><br /><br />
@@ -63,6 +65,6 @@
     </div>
     <% end %>
 
-  </div>
+</div>
 
 <% end %>
